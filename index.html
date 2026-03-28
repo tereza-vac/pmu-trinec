@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bc. Zuzana Roušalová | PMU a Kosmetika Třinec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'salon-pink': '#FFF0F5', /* Pastelová růžová */
+                        'salon-accent': '#EACDDA', /* Tmávší akcent růžové */
+                        'salon-dark-gray': '#374151', /* Tmavě šedá pro text */
+                        'salon-light-gray': '#F3F4F6' /* Světle šedá pro sekce */
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-salon-pink text-salon-dark-gray">
+
+    <nav class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-3xl font-bold text-salon-dark-gray">Bc. Zuzana Roušalová</div>
+            <div class="flex items-center gap-6">
+                <a href="#o-mne" class="hover:text-salon-accent transition">O mně</a>
+                <a href="#sluzby" class="hover:text-salon-accent transition">Služby</a>
+                <a href="#kontakt" class="hover:text-salon-accent transition">Kontakt</a>
+                <a href="#rezervace" class="bg-salon-accent text-white px-6 py-2 rounded-full hover:bg-salon-dark-gray transition">Rezervovat</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight">Objevte svou <span class="italic text-salon-accent">přirozenou krásu</span></h1>
+                <p class="text-xl text-gray-600">Bc. Zuzana Roušalová – Profesionální Permanentní Make-up a Kosmetická Péče v Třinci. S více než 10 lety praxe.</p>
+                <div class="flex gap-4">
+                    <a href="#rezervace" class="bg-salon-accent text-white px-8 py-3 rounded-full text-lg hover:bg-salon-dark-gray transition">Rezervovat termín</a>
+                    <a href="#kontakt" class="bg-salon-light-gray text-salon-dark-gray px-8 py-3 rounded-full text-lg hover:bg-gray-200 transition">Kde nás najdete</a>
+                </div>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-2xl shadow-xl">
+                <img src="portrait.jpg" alt="Bc. Zuzana Roušalová při práci" class="rounded-xl w-full object-cover">
+            </div>
+        </div>
+    </header>
+
+    <section id="o-mne" class="bg-salon-light-gray py-20">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-12 items-center">
+            <div class="md:col-span-2 space-y-4">
+                <h2 class="text-4xl font-bold">O mně</h2>
+                <p>S více než desetiletou praxí v oboru krásy (kosmetika a řasy od roku 2014) a specializací na permanentní make-up od roku 2022 vám garantuji preciznost a osobitý přístup.</p>
+                <p>Jako Bc. Zuzana Roušalová kladu důraz na kvalitu, hygienu a výsledky, které podtrhnou vaši přirozenost. Moje studio v Třinci-Starém městě je místem, kde se můžete uvolnit a nechat o sebe pečovat.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md space-y-3 text-center">
+                <p class="text-2xl font-bold">Zkušenost</p>
+                <p class="text-salon-accent text-6xl font-bold">10+ let</p>
+                <p>v oboru krásy</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sluzby" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center space-y-3 mb-16 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold">Moje Služby & Ceník</h2>
+                <p>Každé ošetření je přizpůsobeno vašim individuálním potřebám. Ceny jsou transparentní a férové.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-salon-light-gray p-8 rounded-2xl space-y-3 text-center border border-gray-100 hover:border-salon-accent transition">
+                    <p class="text-2xl font-semibold">Pudrové obočí (Powder Brows)</p>
+                    <p>Jemný, přirozený a trvanlivý efekt stínování, který dodá obočí dokonalý tvar.</p>
+                    <p class="text-3xl font-bold text-salon-accent pt-4">4 000 Kč</p>
+                    <p class="text-sm text-gray-600">Korekce do měsíce: +1 000 Kč</p>
+                </div>
+                <div class="bg-salon-light-gray p-8 rounded-2xl space-y-3 text-center border border-gray-100 hover:border-salon-accent transition">
+                    <p class="text-2xl font-semibold">Permanentní oční linky</p>
+                    <p>Zvýraznění očí pomocí horních i spodních linek pro uhrančivý pohled.</p>
+                    <p class="text-3xl font-bold text-salon-accent pt-4">2 500 Kč</p>
+                    <p class="text-sm text-gray-600">Korekce do měsíce: +1 000 Kč</p>
+                </div>
+                <div class="bg-salon-light-gray p-8 rounded-2xl space-y-3 text-center border border-gray-100 hover:border-salon-accent transition">
+                    <p class="text-2xl font-semibold">Kompletní Kosmetická Péče</p>
+                    <p>Nabízím také profesionální ošetření pleti a služby pro řasy (od r. 2014).</p>
+                    <p class="text-sm text-gray-600 pt-8">Ceny a služby k doptání při rezervaci.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="inline-flex items-center gap-2 bg-salon-dark-gray text-white px-8 py-3 rounded-full hover:bg-gray-700 transition">
+                    Zobrazit kompletní ceník (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="rezervace" class="py-20 bg-salon-pink">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+            <h2 class="text-4xl font-bold">Rezervujte si svůj termín online</h2>
+            <p>Vyberte si službu, čas a potvrďte rezervaci. Vše proběhne okamžitě.</p>
+            
+            <div class="bg-white p-4 rounded-3xl shadow-lg aspect-[16/10] flex items-center justify-center border-4 border-dashed border-salon-accent">
+                <p class="text-xl text-gray-500 font-medium">[ Placeholder pro Rezervační systém ]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="py-20 bg-salon-light-gray">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center space-y-3 mb-16">
+                <h2 class="text-4xl font-bold">Moje Práce (Galerie)</h2>
+                <p>Nahlédněte na výsledky mých ošetření.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-2 rounded-lg shadow-sm"><img src="galerie1.jpg" alt="PMU Obočí" class="rounded-lg object-cover w-full h-full aspect-square"></div>
+                <div class="bg-white p-2 rounded-lg shadow-sm"><img src="galerie2.jpg" alt="PMU Linky" class="rounded-lg object-cover w-full h-full aspect-square"></div>
+                <div class="bg-white p-2 rounded-lg shadow-sm"><img src="galerie3.jpg" alt="PMU Obočí" class="rounded-lg object-cover w-full h-full aspect-square"></div>
+                <div class="bg-white p-2 rounded-lg shadow-sm"><img src="galerie4.jpg" alt="PMU Obočí" class="rounded-lg object-cover w-full h-full aspect-square"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold">Kontakt</h2>
+                <p>Máte dotazy? Chcete se poradit? Neváhejte mě kontaktovat.</p>
+                <div class="space-y-2">
+                    <p><strong>Telefon:</strong> 724 090 653</p>
+                    <p><strong>E-mail:</strong> zuzana.gryczova@seznam.cz</p>
+                    <p><strong>Adresa salonu:</strong> 1. máje 276, Třinec-Staré město</p>
+                </div>
+            </div>
+            <div class="space-y-6 text-sm text-gray-600 p-8 bg-salon-light-gray rounded-2xl">
+                <h3 class="text-2xl font-bold text-salon-dark-gray">Fakturační údaje & GDPR</h3>
+                <p><strong>Provozovatel:</strong> Bc. Zuzana Roušalová</p>
+                <p>Komenského 1270, Třinec, 739 61</p>
+                <p><strong>IČO:</strong> 71977228</p>
+                <p class="mt-4 border-t pt-4">Zásady ochrany osobních údajů: Vaše údaje (jméno, telefon, e-mail) zadané při rezervaci slouží výhradně pro účely správy vašeho termínu. Nejsou předávány třetím stranám.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
