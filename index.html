@@ -12,13 +12,15 @@
                     colors: {
                         'salon-dark-bg': '#111827', /* Téměř černá */
                         'salon-mid-bg': '#1F2937', /* Tmavě šedá */
-                        'salon-pink-glow': 'rgba(255, 240, 245, 0.2)', /* Jemná pastelová růžová pro halo */
                         'salon-accent': '#EACDDA', /* Zlato-růžová / Rose Gold */
                         'salon-light-text': '#F9FAFB', /* Téměř bílá */
-                        'salon-gray-text': '#D1D5DB' /* Světle šedá */
+                        'salon-gray-text': '#D1D5DB', /* Světle šedá */
+                        'salon-dark-text': '#374151', /* Tmavě šedá pro světlý panel */
+                        'salon-mid-text': '#6B7280' /* Středně šedá pro světlý panel */
                     },
                     boxShadow: {
-                        'salon-logo-glow': '0 0 60px 10px rgba(255, 240, 245, 0.15)' /* Halo efekt pro logo */
+                        'salon-panel-blend': '0 0 100px 30px rgba(17, 24, 39, 0.9)', /* Silné blending stínování */
+                        'salon-light-blend': '0 0 80px 20px rgba(255, 240, 245, 0.1)' /* Jemný blending pro menší loga */
                     }
                 }
             }
@@ -31,12 +33,13 @@
         body { font-family: 'Poppins', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         html { scroll-behavior: smooth; }
-        /* Třída pro halo efekt kolem loga */
-        .logo-glow-effect {
+        
+        /* Třída pro halo efekt kolem loga tam, kde není světlý panel */
+        .logo-halo-effect {
             box-shadow: 0 0 45px 5px rgba(255, 240, 245, 0.1);
             transition: box-shadow 0.3s ease-in-out;
         }
-        .logo-glow-effect:hover {
+        .logo-halo-effect:hover {
             box-shadow: 0 0 60px 15px rgba(255, 240, 245, 0.2);
         }
     </style>
@@ -46,9 +49,7 @@
     <nav class="bg-salon-mid-bg/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
         <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-                <div class="logo-glow-effect rounded-full p-2">
-                    <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-16 h-16 object-contain">
-                </div>
+                <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-16 h-16 object-contain">
                 <div class="text-xl font-medium text-salon-light-text flex flex-col">
                     <span>Zuzana</span>
                     <span class="text-sm">Roušalová</span>
@@ -64,25 +65,31 @@
         </div>
     </nav>
 
-    <header class="bg-salon-dark-bg py-28 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8 flex flex-col items-start">
-                <div class="logo-glow-effect rounded-full p-4">
-                    <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-48 md:w-64 h-auto object-contain">
-                </div>
-                <h1 class="text-6xl md:text-7xl font-bold leading-tight text-salon-light-text">Přirozená krása, <span class="italic text-salon-accent">která vydrží</span></h1>
-                <p class="text-2xl text-salon-gray-text">Zuzana Roušalová – Profesionální permanentní make-up a kosmetická péče v Třinci. Více než 10 let zkušeností.</p>
+    <header class="bg-salon-dark-bg py-28 border-b border-gray-800 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center z-10 relative">
+            
+            <div class="p-10 bg-cover bg-center rounded-3xl shadow-salon-panel-blend flex flex-col items-start space-y-8" 
+                 style="background-image: url('graphics/image_99e23f.png');">
+                
+                <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-64 h-auto object-contain">
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-tight text-salon-dark-text">Přirozená krása, <span class="italic text-salon-accent">která vydrží</span></h1>
+                
+                <p class="text-2xl text-salon-mid-text">Zuzana Roušalová – Profesionální permanentní make-up a kosmetická péče v Třinci. Více než 10 let zkušeností.</p>
+                
                 <div class="flex gap-4 pt-6">
-                    <a href="#rezervace" class="bg-salon-accent text-salon-dark-bg px-10 py-4 rounded-full text-lg hover:bg-salon-light-text font-semibold transition">Rezervovat online termín</a>
-                    <a href="#sluzby" class="bg-salon-mid-bg text-salon-light-text px-10 py-4 rounded-full text-lg hover:bg-gray-700 transition hidden md:inline-block">Moje služby</a>
+                    <a href="#rezervace" class="bg-salon-accent text-salon-dark-bg px-10 py-4 rounded-full text-lg hover:bg-salon-dark-bg hover:text-white font-semibold transition">Rezervovat online termín</a>
                 </div>
             </div>
+
             <div class="bg-salon-mid-bg p-5 rounded-2xl shadow-xl border border-gray-700">
-                <div class="rounded-xl w-full aspect-[4/5] bg-gray-600 border border-gray-500 overflow-hidden shadow-inner">
-                    <img src="graphics/image_9.png" alt="Zuzana Roušalová" class="w-full h-full object-cover">
+                <div class="rounded-xl w-full aspect-[4/5] overflow-hidden shadow-inner bg-gray-600">
+                    <img src="graphics/profil_photo.jpg" alt="Zuzana Roušalová" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
+        
+        <div class="absolute inset-0 bg-salon-dark-bg opacity-90"></div>
     </header>
 
     <section id="o-mne" class="bg-salon-mid-bg py-24">
@@ -143,7 +150,7 @@
             <h2 class="text-5xl font-bold text-salon-light-text">Okamžitá rezervace termínu</h2>
             <p class="text-xl">Vyberte si službu, čas a potvrďte rezervaci. Vše proběhne okamžitě a automaticky.</p>
             
-            <div class="bg-salon-dark-bg p-6 rounded-3xl shadow-xl aspect-[16/10] flex items-center justify-center border-4 border-dashed border-gray-600 overflow-hidden">
+            <div class="bg-salon-dark-bg p-6 rounded-3xl shadow-xl aspect-[16/10] flex items-center justify-center border-4 border-dashed border-gray-600 overflow-hidden relative">
                 <div class="calendly-inline-widget w-full h-[700px]" data-url="https://calendly.com/pmutrinec/30min" style="min-width:320px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
@@ -158,40 +165,38 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-110">
-                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400 px-3 text-center">[ Zde dáme fotku ukázky PMU 1 ]</p>
+                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600 overflow-hidden">
+                        <p class="text-xs text-gray-400 px-3 text-center">[ PMU Foto 1 ]</p>
                     </div>
                 </div>
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-110">
-                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400 px-3 text-center">[ Zde dáme fotku ukázky PMU 2 ]</p>
+                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600 overflow-hidden">
+                        <p class="text-xs text-gray-400 px-3 text-center">[ PMU Foto 2 ]</p>
                     </div>
                 </div>
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-110">
-                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400 px-3 text-center">[ Zde dáme fotku ukázky řas ]</p>
+                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600 overflow-hidden">
+                        <p class="text-xs text-gray-400 px-3 text-center">[ Foto řas ]</p>
                     </div>
                 </div>
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-110">
-                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400 px-3 text-center">[ Zde dáme fotku ukázky kosmetiky ]</p>
+                    <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600 overflow-hidden">
+                        <p class="text-xs text-gray-400 px-3 text-center">[ Foto kosmetiky ]</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="kontakt" class="py-24 bg-salon-mid-bg">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+    <footer id="kontakt" class="py-24 bg-salon-mid-bg border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 border-b border-gray-700 pb-16 mb-16">
             <div class="space-y-8 h-full flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-5 mb-5">
-                        <div class="logo-glow-effect rounded-full p-2 bg-salon-dark-bg border border-gray-700">
-                            <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová" class="w-16 h-16 object-contain">
-                        </div>
+                        <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová" class="w-20 h-20 object-contain">
                         <div>
                             <h2 class="text-5xl font-bold text-salon-light-text">Kontakt</h2>
-                            <p class="text-lg">Objednejte se nebo se přijďte poradit.</p>
+                            <p class="text-lg text-salon-gray-text">Objednejte se nebo se přijďte poradit.</p>
                         </div>
                     </div>
                     <div class="space-y-4 text-lg">
@@ -213,14 +218,14 @@
                 </div>
             </div>
             <div class="space-y-6 text-sm text-salon-gray-text p-10 bg-salon-dark-bg rounded-2xl border border-gray-700 shadow-inner h-fit self-start">
-                <h3 class="text-2xl font-bold text-salon-light-text border-b border-gray-700 pb-3">Fakturační údaje & GDPR</h3>
+                <h3 class="text-2xl font-bold text-salon-light-text border-b border-gray-700 pb-3 mb-5">Fakturační údaje & GDPR</h3>
                 <p><strong>Provozovatel:</strong> Zuzana Roušalová</p>
                 <p>Komenského 1270, Třinec, 739 61</p>
                 <p><strong>IČO:</strong> 71977228</p>
                 <p class="mt-5 border-t border-gray-700 pt-5 text-salon-gray-text"><strong>Ochrana osobních údajů (GDPR):</strong> Vaše údaje (jméno, telefon, e-mail) zadané při rezervaci slouží výhradně pro účely správy vašeho termínu. Nejsou předávány žádným třetím stranám.</p>
             </div>
         </div>
-        <div class="border-t border-gray-800 mt-16 pt-6 text-center text-xs text-gray-600 max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-gray-600">
             &copy; 2024 Zuzana Roušalová. Všechna práva vyhrazena. Web vytvořen ve spolupráci s AI.
         </div>
     </footer>
