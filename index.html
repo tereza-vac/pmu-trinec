@@ -34,13 +34,13 @@
     <nav class="bg-salon-mid-bg/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
         <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-                <img src="image_8.png" alt="PMU Trinec Logo" class="w-16 h-16 rounded-full border border-gray-600">
+                <img src="graphics/logo_pmu_trinec.png" alt="PMU Trinec Logo" class="w-16 h-16 object-contain mix-blend-screen">
                 <div class="text-xl font-medium text-salon-light-text flex flex-col">
                     <span>Bc. Zuzana</span>
                     <span class="text-sm">Roušalová</span>
                 </div>
             </a>
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-6 hidden md:flex">
                 <a href="#o-mne" class="hover:text-salon-accent transition">O mně</a>
                 <a href="#sluzby" class="hover:text-salon-accent transition">Služby</a>
                 <a href="#rezervace" class="hover:text-salon-accent transition">Rezervace</a>
@@ -52,18 +52,18 @@
 
     <header class="bg-salon-dark-bg py-28 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-40 h-40 rounded-full border-2 border-salon-accent shadow-2xl">
+            <div class="space-y-8 flex flex-col items-start">
+                <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-48 md:w-64 h-auto object-contain mix-blend-screen drop-shadow-2xl">
                 <h1 class="text-6xl md:text-7xl font-bold leading-tight text-salon-light-text">Přirozená krása, <span class="italic text-salon-accent">která vydrží</span></h1>
                 <p class="text-2xl text-salon-gray-text">Bc. Zuzana Roušalová – Profesionální permanentní make-up a kosmetická péče v Třinci. Více než 10 let zkušeností.</p>
                 <div class="flex gap-4 pt-6">
                     <a href="#rezervace" class="bg-salon-accent text-salon-dark-bg px-10 py-4 rounded-full text-lg hover:bg-salon-light-text font-semibold transition">Rezervovat online termín</a>
-                    <a href="#sluzby" class="bg-salon-mid-bg text-salon-light-text px-10 py-4 rounded-full text-lg hover:bg-gray-700 transition">Moje služby</a>
+                    <a href="#sluzby" class="bg-salon-mid-bg text-salon-light-text px-10 py-4 rounded-full text-lg hover:bg-gray-700 transition hidden md:inline-block">Moje služby</a>
                 </div>
             </div>
             <div class="bg-salon-mid-bg p-5 rounded-2xl shadow-xl border border-gray-700">
-                <div class="rounded-xl w-full aspect-[4/5] bg-gray-600 flex items-center justify-center border-4 border-dashed border-gray-500">
-                    <p class="text-xl text-gray-400 font-medium">[ Fotka Bc. Zuzany Roušalové ]</p>
+                <div class="rounded-xl w-full aspect-[4/5] bg-gray-600 flex items-center justify-center border-4 border-dashed border-gray-500 overflow-hidden">
+                    <p class="text-xl text-gray-400 font-medium px-4 text-center">[ Zde pak dáme fotku Bc. Zuzany Roušalové ]</p>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
                 <p class="text-lg">Kladu důraz na kvalitu, hygienu a výsledky, které podtrhnou vaši přirozenost. Moje studio v Třinci-Starém městě je místem, kde se můžete uvolnit a nechat o sebe pečovat s důvěrou v odbornost.</p>
             </div>
             <div class="bg-salon-dark-bg p-8 rounded-2xl shadow-md space-y-3 text-center border border-gray-700">
-                <p class="text-2xl font-bold text-salon-light-text">Praxe v oboru krásy</p>
+                <p class="text-2xl font-bold text-salon-light-text">Praxe v oboru</p>
                 <p class="text-salon-accent text-7xl font-bold">10+ let</p>
                 <p class="text-salon-gray-text">Služby od r. 2014</p>
             </div>
@@ -112,10 +112,10 @@
                 </div>
                 <div class="bg-salon-mid-bg p-10 rounded-2xl space-y-4 text-center border border-gray-700 transition">
                     <p class="text-2xl font-semibold text-salon-light-text">Kompletní Kosmetická Péče</p>
-                    <p>Profesionální péče o plet a řasy (od r. 2014) s důrazem na zdraví a revitalizaci.</p>
+                    <p>Profesionální péče o pleť a řasy (od r. 2014) s důrazem na zdraví a revitalizaci.</p>
                     <div class="flex flex-col items-center pt-8">
                         <span class="text-xl font-medium text-salon-gray-text">Individuální ceny</span>
-                        <a href="#rezervace" class="text-sm pt-2 hover:text-salon-accent transition">Zobrazit ceník a rezervovat</a>
+                        <a href="#rezervace" class="text-sm pt-2 hover:text-salon-accent transition">Více v rezervaci</a>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
             <p class="text-xl">Vyberte si službu, čas a potvrďte rezervaci. Vše proběhne okamžitě a automaticky.</p>
             
             <div class="bg-salon-dark-bg p-6 rounded-3xl shadow-xl aspect-[16/10] flex items-center justify-center border-4 border-dashed border-gray-600">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/pmutrinec/30min" style="min-width:320px;height:700px;"></div>
+                <div class="calendly-inline-widget w-full" data-url="https://calendly.com/pmutrinec/30min" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
         </div>
@@ -143,22 +143,22 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
                     <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400">[ PMU Galerie Foto 1 ]</p>
+                        <p class="text-xs text-gray-400">[ PMU Foto 1 ]</p>
                     </div>
                 </div>
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
                     <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400">[ PMU Galerie Foto 2 ]</p>
+                        <p class="text-xs text-gray-400">[ PMU Foto 2 ]</p>
                     </div>
                 </div>
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
                     <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400">[ Galerie Foto 3 ]</p>
+                        <p class="text-xs text-gray-400">[ PMU Foto 3 ]</p>
                     </div>
                 </div>
                 <div class="bg-salon-mid-bg p-3 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
                     <div class="rounded-lg w-full aspect-square bg-gray-700 flex items-center justify-center border border-gray-600">
-                        <p class="text-xs text-gray-400">[ Galerie Foto 4 ]</p>
+                        <p class="text-xs text-gray-400">[ PMU Foto 4 ]</p>
                     </div>
                 </div>
             </div>
@@ -169,7 +169,7 @@
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
             <div class="space-y-8">
                 <div class="flex items-center gap-5">
-                    <img src="image_8.png" alt="PMU Trinec" class="w-24 h-24 rounded-full border-2 border-salon-accent">
+                    <img src="graphics/logo_pmu_trinec.png" alt="PMU Trinec" class="w-24 h-24 object-contain mix-blend-screen drop-shadow-lg">
                     <div>
                         <h2 class="text-5xl font-bold text-salon-light-text">Kontakt</h2>
                         <p class="text-lg">Objednejte se nebo se přijďte poradit.</p>
@@ -177,14 +177,22 @@
                 </div>
                 <div class="space-y-4 text-lg">
                     <p><strong>Telefon:</strong> 724 090 653</p>
-                    <p><strong>E-mail:</strong> <a href="mailto:pmutrinec@gmail.com" class="hover:text-salon-accent">pmutrinec@gmail.com</a></p>
+                    <p><strong>E-mail:</strong> <a href="mailto:pmutrinec@gmail.com" class="hover:text-salon-accent transition">pmutrinec@gmail.com</a></p>
                     <p><strong>Adresa salonu:</strong> 1. máje 276, Třinec-Staré město</p>
                 </div>
-                <div class="bg-gray-800 p-3 rounded-2xl w-full aspect-[16/9] flex items-center justify-center border border-gray-700">
-                    <p class="text-sm text-gray-400">[ Placeholder pro Google Mapy ]</p>
+                <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-gray-700 bg-salon-dark-bg">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        src="https://maps.google.com/maps?q=1.%20m%C3%A1je%20276,%20T%C5%99inec&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
                 </div>
             </div>
-            <div class="space-y-6 text-sm text-salon-gray-text p-10 bg-salon-dark-bg rounded-2xl border border-gray-700 shadow-inner">
+            <div class="space-y-6 text-sm text-salon-gray-text p-10 bg-salon-dark-bg rounded-2xl border border-gray-700 shadow-inner h-fit">
                 <h3 class="text-2xl font-bold text-salon-light-text border-b border-gray-700 pb-3">Fakturační údaje & GDPR</h3>
                 <p><strong>Provozovatel:</strong> Bc. Zuzana Roušalová</p>
                 <p>Komenského 1270, Třinec, 739 61</p>
