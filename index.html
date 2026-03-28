@@ -34,7 +34,7 @@
     <nav class="bg-salon-mid-bg/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
         <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-                <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-16 h-16 rounded-full object-cover shadow-[0_0_15px_rgba(234,205,218,0.3)]">
+                <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-16 h-16 rounded-full object-contain bg-white shadow-[0_0_20px_5px_rgba(255,255,255,0.15)]">
                 <div class="text-xl font-medium text-salon-light-text flex flex-col">
                     <span>Zuzana</span>
                     <span class="text-sm">Roušalová</span>
@@ -53,7 +53,10 @@
     <header class="bg-salon-dark-bg py-28 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-8 flex flex-col items-start">
-                <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-56 md:w-72 h-56 md:h-72 rounded-full object-cover shadow-[0_0_60px_rgba(234,205,218,0.3)] border border-salon-accent/20">
+                <div class="p-1 rounded-full bg-white/5 shadow-[0_0_60px_20px_rgba(255,255,255,0.1)]">
+                    <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová PMU" class="w-56 md:w-72 h-56 md:h-72 rounded-full object-contain bg-white shadow-inner">
+                </div>
+                
                 <h1 class="text-6xl md:text-7xl font-bold leading-tight text-salon-light-text">Přirozená krása, <span class="italic text-salon-accent">která vydrží</span></h1>
                 <p class="text-2xl text-salon-gray-text">Zuzana Roušalová – Profesionální permanentní make-up a kosmetická péče v Třinci. Více než 10 let zkušeností.</p>
                 <div class="flex gap-4 pt-6">
@@ -63,7 +66,7 @@
             </div>
             <div class="bg-salon-mid-bg p-5 rounded-2xl shadow-xl border border-gray-700">
                 <div class="rounded-xl w-full aspect-[4/5] overflow-hidden shadow-inner bg-gray-600">
-                    <img src="graphics/profil_photo.jpg" alt="Zuzana Roušalová" class="w-full h-full object-cover">
+                    <img src="graphics/profil_photo.jpg" alt="Zuzana Roušalová" class="w-full h-full object-cover object-top">
                 </div>
             </div>
         </div>
@@ -140,26 +143,18 @@
                 <h2 class="text-5xl font-bold text-salon-light-text border-r-4 border-salon-accent pr-4">Galerie Prací</h2>
                 <p class="text-lg">Nahlédněte na výsledky mých ošetření. Každá fotka je bez úprav a filtrů.</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
                 <div class="bg-salon-mid-bg p-2 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
-                    <div class="rounded-lg w-full aspect-square overflow-hidden bg-gray-800">
-                        <img src="graphics/work1.jpeg" alt="Ukázka práce PMU 1" class="w-full h-full object-cover">
-                    </div>
+                    <img src="graphics/work1.jpeg" alt="Ukázka práce PMU 1" class="w-full h-auto rounded-lg shadow-inner">
                 </div>
                 <div class="bg-salon-mid-bg p-2 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
-                    <div class="rounded-lg w-full aspect-square overflow-hidden bg-gray-800">
-                        <img src="graphics/work2.jpeg" alt="Ukázka práce PMU 2" class="w-full h-full object-cover">
-                    </div>
+                    <img src="graphics/work2.jpeg" alt="Ukázka práce PMU 2" class="w-full h-auto rounded-lg shadow-inner">
                 </div>
                 <div class="bg-salon-mid-bg p-2 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
-                    <div class="rounded-lg w-full aspect-square overflow-hidden bg-gray-800">
-                        <img src="graphics/work3.jpeg" alt="Ukázka práce PMU 3" class="w-full h-full object-cover">
-                    </div>
+                    <img src="graphics/work3.jpeg" alt="Ukázka práce PMU 3" class="w-full h-auto rounded-lg shadow-inner">
                 </div>
                 <div class="bg-salon-mid-bg p-2 rounded-xl border border-gray-700 shadow-sm transition hover:scale-105">
-                    <div class="rounded-lg w-full aspect-square overflow-hidden bg-gray-800">
-                        <img src="graphics/work4.jpeg" alt="Ukázka práce PMU 4" class="w-full h-full object-cover">
-                    </div>
+                    <img src="graphics/work4.jpeg" alt="Ukázka práce PMU 4" class="w-full h-auto rounded-lg shadow-inner">
                 </div>
             </div>
         </div>
@@ -170,7 +165,7 @@
             <div class="space-y-8 h-full flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-5 mb-5">
-                        <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová" class="w-24 h-24 rounded-full object-cover shadow-[0_0_20px_rgba(234,205,218,0.2)]">
+                        <img src="graphics/logo_pmu_trinec.png" alt="Zuzana Roušalová" class="w-24 h-24 rounded-full object-contain bg-white shadow-[0_0_30px_10px_rgba(255,255,255,0.1)]">
                         <div>
                             <h2 class="text-5xl font-bold text-salon-light-text">Kontakt</h2>
                             <p class="text-lg text-salon-gray-text">Objednejte se nebo se přijďte poradit.</p>
@@ -190,7 +185,7 @@
                         loading="lazy" 
                         allowfullscreen 
                         referrerpolicy="no-referrer-when-downgrade" 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.4646706056525!2d18.66314847713437!3d50.673896571501174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471415951d6c29a5%3A0x6733f3e2e0e0e0e0!2zMS4gbcOhamUgMjc2LCA3MzkgNjEgVMWZw61uZWMtU3RhcsOpIG3Em3N0bw!5e0!3m2!1scs!2scz!4v1709999999999!5m2!1scs!2scz">
+                        src="https://maps.google.com/maps?q=1.%20m%C3%A1je%20276,%20T%C5%99inec&t=&z=15&ie=UTF8&iwloc=&output=embed">
                     </iframe>
                 </div>
             </div>
@@ -203,7 +198,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6 text-center text-xs text-gray-600">
-            © 2026 Tereza Vačina. Všechna práva vyhrazena.
+            © 2025 Tereza Vačina. Všechna práva vyhrazena.
         </div>
     </footer>
 
