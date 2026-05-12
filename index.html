@@ -15,7 +15,8 @@
                         'salon-mid-bg': '#1F2937',
                         'salon-accent': '#EACDDA',
                         'salon-light-text': '#F9FAFB',
-                        'salon-gray-text': '#D1D5DB'
+                        'salon-gray-text': '#D1D5DB',
+                        'whatsapp': '#25D366'
                     }
                 }
             }
@@ -80,6 +81,20 @@
         .lightbox-close:hover {
             color: #EACDDA;
         }
+
+        .contact-float {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 80;
+        }
+
+        @media (max-width: 640px) {
+            .contact-float {
+                right: 12px;
+                bottom: 12px;
+            }
+        }
     </style>
 </head>
 
@@ -121,12 +136,17 @@
                 </h1>
 
                 <p class="text-xl md:text-2xl text-salon-gray-text">
-                    Zuzana Roušalová – Profesionální permanentní make-up, prodlužování řas a kosmetická péče v Třinci. Více než 10 let zkušeností.
+                    Zuzana Roušalová – profesionální permanentní make-up, prodlužování řas a kosmetická péče v Třinci. Více než 10 let zkušeností.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-4 md:pt-6 w-full sm:w-auto">
                     <a href="#rezervace" class="bg-salon-accent text-salon-dark-bg px-10 py-4 rounded-md text-lg hover:bg-salon-light-text font-semibold transition text-center shadow-[0_0_20px_rgba(234,205,218,0.3)]">Rezervovat online termín</a>
-                    <a href="#sluzby" class="hidden md:inline-block bg-salon-mid-bg text-salon-light-text px-10 py-4 rounded-md text-lg hover:bg-gray-700 border border-gray-600 transition text-center">Moje služby</a>
+                    <a href="https://wa.me/420724090653?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20va%C5%A1e%20slu%C5%BEby%20a%20r%C3%A1da%20bych%20se%20zeptala%20na%20voln%C3%BD%20term%C3%ADn.%20D%C4%9Bkuji." target="_blank" rel="noopener" class="bg-salon-mid-bg text-salon-light-text px-10 py-4 rounded-md text-lg hover:bg-gray-700 border border-gray-600 transition text-center flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5 text-whatsapp" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                            <path d="M16.01 3.2C9 3.2 3.3 8.8 3.3 15.7c0 2.3.6 4.5 1.8 6.5L3.2 29l7-1.8c1.8 1 3.8 1.5 5.9 1.5 7 0 12.7-5.6 12.7-12.5S23 3.2 16 3.2zm0 23.3c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.7-1.6-5.7 0-5.7 4.8-10.4 10.6-10.4s10.6 4.7 10.6 10.4-4.8 10.7-10.6 10.7zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5 0-.1-.3-.2-.6-.4z"/>
+                        </svg>
+                        Napsat na WhatsApp
+                    </a>
                 </div>
             </div>
 
@@ -197,7 +217,7 @@
 
             <div class="bg-salon-mid-bg rounded-xl border border-gray-700 p-8 md:p-10 shadow-xl">
                 <div class="text-center max-w-3xl mx-auto mb-10">
-                    <h3 class="text-3xl md:text-4xl font-bold text-salon-light-text">Ceník prodlužování řas</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold text-salon-light-text">Ceník prodlužování a zahuštění řas</h3>
                     <p class="mt-3 text-base md:text-lg">Technika se volí podle kvality vašich přírodních řas, požadovaného efektu a doporučení stylistky.</p>
                 </div>
 
@@ -226,14 +246,13 @@
 
                 <div class="grid md:grid-cols-2 gap-6 mt-6">
                     <div class="bg-salon-dark-bg rounded-lg p-6 border border-gray-700">
-                        <h4 class="text-2xl font-bold text-salon-light-text mb-3">Doplnění řas</h4>
-                        <p class="text-sm leading-relaxed">Doporučené doplnění je obvykle po 2–4 týdnech podle rychlosti růstu přírodních řas a domácí péče. Pokud je vypadaná větší část aplikace, účtuje se nový set.</p>
+                        <h4 class="text-2xl font-bold text-salon-light-text mb-3">Zahuštění řas</h4>
+                        <p class="text-sm leading-relaxed">Decentní doplnění objemu pro klientky, které chtějí přirozeně hustší řasy bez příliš výrazného efektu. Vhodné i jako kompromis mezi klasickou metodou 1:1 a objemovými technikami.</p>
                     </div>
 
                     <div class="bg-salon-dark-bg rounded-lg p-6 border border-gray-700">
-                        <h4 class="text-2xl font-bold text-salon-light-text mb-3">Odstranění řas</h4>
-                        <p class="text-sm leading-relaxed">Šetrné odstranění umělých řas speciálním přípravkem bez poškození přírodních řas.</p>
-                        <p class="text-salon-accent text-2xl font-bold mt-4">300 Kč</p>
+                        <h4 class="text-2xl font-bold text-salon-light-text mb-3">Doplnění a odstranění</h4>
+                        <p class="text-sm leading-relaxed">Doplnění je doporučené obvykle po 2–4 týdnech podle růstu přírodních řas a domácí péče. Šetrné odstranění řas speciálním přípravkem: <span class="text-salon-accent font-semibold">300 Kč</span>.</p>
                     </div>
                 </div>
 
@@ -248,7 +267,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center space-y-3 mb-14 max-w-3xl mx-auto">
                 <h2 class="text-4xl md:text-5xl font-bold text-salon-light-text border-r-4 border-salon-accent pr-4 inline-block">Galerie Prací</h2>
-                <p class="text-lg mt-3">Reálné výsledky permanentního make-upu a prodlužování řas.</p>
+                <p class="text-lg mt-3">Reálné výsledky permanentního make-upu, prodlužování a zahuštění řas.</p>
                 <p class="text-sm text-salon-accent">Kliknutím na fotografii ji zobrazíte ve větším náhledu.</p>
             </div>
 
@@ -316,7 +335,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="mb-16">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="h-px bg-gray-700 flex-1"></div>
                     <h3 class="text-3xl md:text-4xl font-bold text-salon-light-text text-center">Prodlužování řas</h3>
@@ -357,6 +376,34 @@
                     <div class="gallery-item bg-salon-mid-bg rounded-lg overflow-hidden border border-gray-700 shadow-lg hover:border-salon-accent transition duration-300" data-src="graphics/rasy_06.png">
                         <div class="aspect-[4/3] overflow-hidden">
                             <img src="graphics/rasy_06.png" alt="Prodlužování řas 6" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="h-px bg-gray-700 flex-1"></div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-salon-light-text text-center">Zahuštění řas</h3>
+                    <div class="h-px bg-gray-700 flex-1"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="gallery-item bg-salon-mid-bg rounded-lg overflow-hidden border border-gray-700 shadow-lg hover:border-salon-accent transition duration-300" data-src="graphics/zah_01.png">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="graphics/zah_01.png" alt="Zahuštění řas 1" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <div class="gallery-item bg-salon-mid-bg rounded-lg overflow-hidden border border-gray-700 shadow-lg hover:border-salon-accent transition duration-300" data-src="graphics/zah_02.png">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="graphics/zah_02.png" alt="Zahuštění řas 2" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <div class="gallery-item bg-salon-mid-bg rounded-lg overflow-hidden border border-gray-700 shadow-lg hover:border-salon-accent transition duration-300" data-src="graphics/zah_03.png">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="graphics/zah_03.png" alt="Zahuštění řas 3" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -431,6 +478,27 @@
                 <div class="calendly-inline-widget w-full" data-url="https://calendly.com/pmutrinec/30min" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
+
+            <div class="bg-salon-dark-bg/80 border border-salon-accent/30 rounded-xl p-6 md:p-8 shadow-[0_0_25px_rgba(234,205,218,0.08)]">
+                <h3 class="text-2xl md:text-3xl font-bold text-salon-light-text">Nefunguje vám rezervace?</h3>
+                <p class="mt-3 text-base md:text-lg">Napište mi jednoduše přes WhatsApp nebo SMS a domluvíme termín osobně.</p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+                    <a href="https://wa.me/420724090653?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20va%C5%A1e%20slu%C5%BEby%20a%20r%C3%A1da%20bych%20se%20zeptala%20na%20voln%C3%BD%20term%C3%ADn.%20D%C4%9Bkuji." target="_blank" rel="noopener" class="bg-whatsapp text-white px-8 py-3 rounded-md font-semibold hover:brightness-110 transition flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                            <path d="M16.01 3.2C9 3.2 3.3 8.8 3.3 15.7c0 2.3.6 4.5 1.8 6.5L3.2 29l7-1.8c1.8 1 3.8 1.5 5.9 1.5 7 0 12.7-5.6 12.7-12.5S23 3.2 16 3.2zm0 23.3c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.7-1.6-5.7 0-5.7 4.8-10.4 10.6-10.4s10.6 4.7 10.6 10.4-4.8 10.7-10.6 10.7zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5 0-.1-.3-.2-.6-.4z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+
+                    <a href="sms:+420724090653?body=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20va%C5%A1e%20slu%C5%BEby%20a%20r%C3%A1da%20bych%20se%20zeptala%20na%20voln%C3%BD%20term%C3%ADn.%20D%C4%9Bkuji." class="bg-salon-accent text-salon-dark-bg px-8 py-3 rounded-md font-semibold hover:bg-salon-light-text transition flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                        </svg>
+                        SMS zpráva
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -449,9 +517,25 @@
                     </div>
 
                     <div class="space-y-4 text-lg">
-                        <p><strong>Telefon:</strong> 724 090 653</p>
+                        <p><strong>Telefon:</strong> <a href="tel:+420724090653" class="hover:text-salon-accent transition">724 090 653</a></p>
                         <p><strong>E-mail:</strong> <a href="mailto:pmutrinec@gmail.com" class="hover:text-salon-accent transition">pmutrinec@gmail.com</a></p>
                         <p><strong>Adresa salonu:</strong> 1. máje 276, Třinec-Staré město</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mt-7">
+                        <a href="https://wa.me/420724090653?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20va%C5%A1e%20slu%C5%BEby%20a%20r%C3%A1da%20bych%20se%20zeptala%20na%20voln%C3%BD%20term%C3%ADn.%20D%C4%9Bkuji." target="_blank" rel="noopener" class="bg-whatsapp text-white px-6 py-3 rounded-md font-semibold hover:brightness-110 transition flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                                <path d="M16.01 3.2C9 3.2 3.3 8.8 3.3 15.7c0 2.3.6 4.5 1.8 6.5L3.2 29l7-1.8c1.8 1 3.8 1.5 5.9 1.5 7 0 12.7-5.6 12.7-12.5S23 3.2 16 3.2zm0 23.3c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.7-1.6-5.7 0-5.7 4.8-10.4 10.6-10.4s10.6 4.7 10.6 10.4-4.8 10.7-10.6 10.7zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5 0-.1-.3-.2-.6-.4z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+
+                        <a href="sms:+420724090653?body=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20va%C5%A1e%20slu%C5%BEby%20a%20r%C3%A1da%20bych%20se%20zeptala%20na%20voln%C3%BD%20term%C3%ADn.%20D%C4%9Bkuji." class="bg-salon-accent text-salon-dark-bg px-6 py-3 rounded-md font-semibold hover:bg-salon-light-text transition flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                            </svg>
+                            Poslat SMS
+                        </a>
                     </div>
                 </div>
 
@@ -482,6 +566,22 @@
             © 2026 Tereza Vačina. Všechna práva vyhrazena.
         </div>
     </footer>
+
+    <div class="contact-float">
+        <div class="flex flex-col gap-3">
+            <a href="https://wa.me/420724090653?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20va%C5%A1e%20slu%C5%BEby%20a%20r%C3%A1da%20bych%20se%20zeptala%20na%20voln%C3%BD%20term%C3%ADn.%20D%C4%9Bkuji." target="_blank" rel="noopener" aria-label="Napsat na WhatsApp" class="w-12 h-12 rounded-full bg-whatsapp text-white shadow-lg flex items-center justify-center hover:scale-105 transition">
+                <svg class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                    <path d="M16.01 3.2C9 3.2 3.3 8.8 3.3 15.7c0 2.3.6 4.5 1.8 6.5L3.2 29l7-1.8c1.8 1 3.8 1.5 5.9 1.5 7 0 12.7-5.6 12.7-12.5S23 3.2 16 3.2zm0 23.3c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.7-1.6-5.7 0-5.7 4.8-10.4 10.6-10.4s10.6 4.7 10.6 10.4-4.8 10.7-10.6 10.7zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5 0-.1-.3-.2-.6-.4z"/>
+                </svg>
+            </a>
+
+            <a href="sms:+420724090653?body=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20va%C5%A1e%20slu%C5%BEby%20a%20r%C3%A1da%20bych%20se%20zeptala%20na%20voln%C3%BD%20term%C3%ADn.%20D%C4%9Bkuji." aria-label="Poslat SMS" class="w-12 h-12 rounded-full bg-salon-accent text-salon-dark-bg shadow-lg flex items-center justify-center hover:scale-105 transition">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
 
     <div id="lightbox" class="lightbox">
         <span id="lightboxClose" class="lightbox-close">&times;</span>
